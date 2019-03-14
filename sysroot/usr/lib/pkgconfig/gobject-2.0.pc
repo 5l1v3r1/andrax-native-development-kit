@@ -1,4 +1,4 @@
-prefix=${frida_sdk_prefix}
+prefix=/data/data/com.thecrackertechnology.andrax/ANDRAX/glib
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -6,7 +6,7 @@ includedir=${prefix}/include
 Name: GObject
 Description: GLib Type, Object, Parameter and Signal Library
 Requires: glib-2.0
-Version: 2.53.2
+Version: 2.58.1
 Libs: -L${libdir} -lgobject-2.0
-Libs.private: -L${frida_sdk_prefix}/lib -lffi
+Libs.private: -L/home/mythical/Downloads/libffi-3.2.1/arm-unknown-linux-androideabi/lib -lffi
 Cflags:

@@ -59,6 +59,9 @@ __BEGIN_DECLS
   unsigned long st_ctime_nsec; \
   unsigned int __unused4; \
   unsigned int __unused5; \
+  struct timespec st_atim; \  
+  struct timespec st_mtim; \  
+  struct timespec st_ctim; \
 
 #elif defined(__mips__) && !defined(__LP64__)
 #define __STAT64_BODY \
@@ -124,6 +127,9 @@ __BEGIN_DECLS
   unsigned long st_ctime; \
   unsigned long st_ctime_nsec; \
   unsigned long long st_ino; \
+  struct timespec st_atim; \  
+  struct timespec st_mtim; \  
+  struct timespec st_ctim; \
 
 #endif
 
